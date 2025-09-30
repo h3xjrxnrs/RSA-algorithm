@@ -33,3 +33,26 @@ button{cursor:pointer;background:linear-gradient(180deg,var(--accent),#1c5f8f);b
 button:active{transform:translateY(1px)}
 .note{color:var(--muted);font-size:13px}
 footer{margin-top:18px;color:var(--muted);font-size:13px}
+.author-card {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: var(--card);
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.author-card img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--accent);
+}
+
