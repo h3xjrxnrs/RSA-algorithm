@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RSA — ручний ввід значень</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>RSA  </h1>
+
+    <section class="keys">
+      <h2>Введи ключі (ручний ввід)</h2>
+
+      <div class="grid">
+        <label>p (просте) <input id="p" type="text" placeholder="введи p"></label>
+        <label>q (просте) <input id="q" type="text" placeholder="введи q"></label>
+        <label>n (обчислюється) <input id="n" readonly></label>
+        <label>φ(n) (обчислюється) <input id="phi" readonly></label>
+
+        <label>e (відкритий) <input id="e" type="text" placeholder="введи e"></label>
+        <label>d (секретний) <input id="d" type="text" placeholder="введи d або обчисли"></label>
+        <div class="buttons">
+          <button id="computeNPhi">Обчислити n і φ(n)</button>
+          <button id="computeD">Обчислити d (modInverse)</button>
+        </div>
+      </div>
+
+
+    </section>
+
+    <section class="encrypt">
+      <h2>Шифрування / Дешифрування</h2>
+
+      <div class="row">
+        <label>Текст для шифрування <input id="plaintext" placeholder="Напиши текст"/></label>
+        <button id="encryptBtn">Зашифрувати</button>
+      </div>
+
+      <div class="row">
+        <label>Шифротекст  <textarea id="ciphertext" placeholder="числа через кому"></textarea></label>
+        <div class="col">
+          <button id="decryptBtn">Розшифрувати (з ciphertext)</button>
+          <button id="clearBtn">Очистити поля</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <label>Розшифрований текст <input id="decrypted" readonly></label>
+      </div>
+
+     
+    </section>
+
+    <footer>RSA</footer>
+  </main>
+
+  <script src="rsa.js"></script>
+</body>
+</html>
